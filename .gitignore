@@ -37,7 +37,6 @@ __pycache__/
 *.pyc
 
 # Archives
-*.zip
 *.tar.gz
 *.rar
 *.7z
@@ -46,4 +45,3 @@ __pycache__/
 *.log
 *.swp
 *.swo
-.DS_Store
