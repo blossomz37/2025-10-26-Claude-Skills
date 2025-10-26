@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Sands - Improved Brand (Mockup 2)</title>
+    <link href="https://fonts.googleapis.com/css?family=Rochester:400|Lora:400,400i,700,700i" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 20px;
+            line-height: 2.0;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .site-title {
+            font-family: 'Rochester', cursive, serif;
+            font-size: 72px;
+            color: #5d2e46;
+            margin-bottom: 24px;
+        }
+        
+        .tagline {
+            font-size: 24px;
+            color: #d4a5a5;
+            margin-bottom: 30px;
+        }
+        
+        .genre-description {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+        }
+        
+        .free-book-cta {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 18px 36px;
+            border: 2px solid #d4a5a5;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            min-height: 48px;
+            transition: all 0.3s ease;
+        }
+        
+        .free-book-cta:hover {
+            background-color: #c9969c;
+            border-color: #c9969c;
+            transform: scale(1.02);
+        }
+        
+        .series-section {
+            margin-bottom: 100px;
+            padding: 60px 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .series-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #5d2e46;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 1024px) {
+            .book-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        .book-card {
+            text-align: center;
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: auto;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .book-cover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        }
+        
+        .book-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #5d2e46;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        
+        .book-description {
+            font-size: 18px;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        
+        .more-details-btn {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px 32px;
+            border: 2px solid #d4a5a5;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            min-height: 48px;
+            min-width: 160px;
+            transition: all 0.3s ease;
+        }
+        
+        .more-details-btn:hover {
+            background-color: #c9969c;
+            border-color: #c9969c;
+            transform: scale(1.02);
+        }
+        
+        .mockup-label {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #5d2e46;
+            color: #ffffff;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f9f5f0;
+            border-radius: 12px;
+            margin-top: 80px;
+        }
+        
+        footer p {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        .social-links {
+            margin-top: 30px;
+        }
+        
+        .social-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            margin: 0 12px;
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+            background-color: #c9969c;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        a {
+            color: #5d2e46;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #d4a5a5;
+        }
+        
+        a:visited {
+            color: #7a4e5f;
+        }
+        
+        a:focus {
+            outline: 3px solid #5d2e46;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mockup-label">MOCKUP 2: Improved Brand</div>
+    
+    <div class="container">
+        <header>
+            <h1 class="site-title">Olivia Sands</h1>
+            <p class="tagline">Heartwarming Romance ❤ Olivia Sands ❤ Romance douce</p>
+            <p class="genre-description">Heartwarming Contemporary Cozy Small Town Romance Series</p>
+            <a href="#" class="free-book-cta">Click Here to Get a Free Book</a>
+        </header>
+        
+        <!-- Snowberry Hill Series -->
+        <section class="series-section">
+            <h2 class="series-title">Snowberry Hill</h2>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8d5c4 0%, #d4c0af 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5d4e37; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Colton
+                    </div>
+                    <h3 class="book-title">Colton</h3>
+                    <p class="book-description">A heartwarming contemporary small-town romance about duty, desire, and finding love in unexpected places.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d4c4e8 0%, #c0afd4 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #4e375d; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Mason
+                    </div>
+                    <h3 class="book-title">Mason</h3>
+                    <p class="book-description">Mason's perfectly planned life takes an unexpected turn when she arrives in Elm Ridge.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #c4e8d5 0%, #afd4c0 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #375d4e; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Brandon
+                    </div>
+                    <h3 class="book-title">Brandon</h3>
+                    <p class="book-description">A second-chance romance set against the backdrop of Kentucky's beautiful bourbon country.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8c4d5 0%, #d4afc0 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5d374e; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Dylan
+                    </div>
+                    <h3 class="book-title">Dylan</h3>
+                    <p class="book-description">When city meets country in this charming small-town tale of love and belonging.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8e0c4 0%, #d4ccaf 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5d5137; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Austin
+                    </div>
+                    <h3 class="book-title">Austin</h3>
+                    <p class="book-description">A tender story of healing and hope in the welcoming community of Elm Ridge, Kentucky.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #c4d5e8 0%, #afc0d4 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #374e5d; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Nathan
+                    </div>
+                    <h3 class="book-title">Nathan</h3>
+                    <p class="book-description">The final book in the beloved Snowberry Hill series brings all our favorites together.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d5c4e8 0%, #c0afd4 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #51374e; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Jackson
+                    </div>
+                    <h3 class="book-title">Jackson</h3>
+                    <p class="book-description">A heartwarming story about finding family where you least expect it.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8d5d5 0%, #d4c0c0 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5d3737; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>Tyler
+                    </div>
+                    <h3 class="book-title">Tyler</h3>
+                    <p class="book-description">Love blooms in the most unexpected places in this sweet small-town romance.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dovetail Lake Series -->
+        <section class="series-section">
+            <h2 class="series-title">Dovetail Lake</h2>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d5e8e0 0%, #c0d4cc 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #375d51; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Lake House
+                    </div>
+                    <h3 class="book-title">The Lake House</h3>
+                    <p class="book-description">A summer romance on the shores of beautiful Dovetail Lake that will warm your heart.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8d5e0 0%, #d4c0cc 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5d3751; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Bookshop
+                    </div>
+                    <h3 class="book-title">The Bookshop</h3>
+                    <p class="book-description">Love blooms among the stacks in this cozy small-town tale perfect for book lovers.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e0d5e8 0%, #ccc0d4 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #51375d; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Coffee Shop
+                    </div>
+                    <h3 class="book-title">The Coffee Shop</h3>
+                    <p class="book-description">Where every cup comes with a side of romance in downtown Dovetail Lake.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8e0d5 0%, #d4ccc0 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5d5137; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Bakery
+                    </div>
+                    <h3 class="book-title">The Bakery</h3>
+                    <p class="book-description">Sweet treats and even sweeter romance at Dovetail Lake's beloved bakery.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d5e8d5 0%, #c0d4c0 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #375d37; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Garden
+                    </div>
+                    <h3 class="book-title">The Garden</h3>
+                    <p class="book-description">Love grows where it's planted in this tender story of second chances.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8d5d5 0%, #d4c0c0 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5d3737; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Inn
+                    </div>
+                    <h3 class="book-title">The Inn</h3>
+                    <p class="book-description">Check in for cozy romance at the charming Dovetail Lake Inn.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d5d5e8 0%, #c0c0d4 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #37375d; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Winery
+                    </div>
+                    <h3 class="book-title">The Winery</h3>
+                    <p class="book-description">Romance ages like fine wine in this delightful lakeside story.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e0e8d5 0%, #ccd4c0 100%); height: 380px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #515d37; font-weight: 600; border-radius: 4px;">
+                        [Book Cover]<br>The Lighthouse
+                    </div>
+                    <h3 class="book-title">The Lighthouse</h3>
+                    <p class="book-description">A beacon of hope and love guides two hearts together at Dovetail Lake.</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p style="color: #5d2e46; font-weight: 700; font-size: 20px;">Olivia Sands</p>
+            <p>© 2025 Olivia Sands. All rights reserved.</p>
+            <p>Heartwarming Contemporary Cozy Small Town Romance</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" title="Facebook">f</a>
+                <a href="#" class="social-icon" title="Instagram">i</a>
+                <a href="#" class="social-icon" title="Pinterest">p</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

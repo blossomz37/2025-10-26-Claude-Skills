@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Sands - Enhanced 2025 Design</title>
+    <link href="https://fonts.googleapis.com/css?family=Rochester:400|Lora:400,400i,700,700i" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 20px;
+            line-height: 2.0;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+        
+        /* Accessibility Controls */
+        .accessibility-bar {
+            background-color: #5d2e46;
+            color: #ffffff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+        
+        .text-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .text-controls button {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            border: 2px solid #d4a5a5;
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            min-height: 40px;
+            font-family: 'Lora', Georgia, serif;
+        }
+        
+        .text-controls button:hover {
+            background-color: #c9969c;
+            border-color: #c9969c;
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section with Social Proof */
+        .hero {
+            background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .site-title {
+            font-family: 'Rochester', cursive, serif;
+            font-size: 68px;
+            color: #5d2e46;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .tagline {
+            font-size: 32px;
+            color: #d4a5a5;
+            margin-bottom: 30px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        
+        /* Social Proof Badge - NEW */
+        .social-proof-badge {
+            background-color: #ffffff;
+            border: 3px solid #d4a5a5;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 12px rgba(93, 46, 70, 0.15);
+        }
+        
+        .rating-stars {
+            font-size: 48px;
+            color: #d4a5a5;
+            margin-bottom: 15px;
+            letter-spacing: 8px;
+        }
+        
+        .rating-text {
+            font-size: 28px;
+            color: #5d2e46;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .review-count {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+        
+        .trust-badge {
+            background-color: #f9f5f0;
+            border: 2px solid #d4a5a5;
+            border-radius: 8px;
+            padding: 15px 25px;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            color: #5d2e46;
+            margin-top: 15px;
+        }
+        
+        /* Featured Testimonial Rotation - NEW */
+        .featured-testimonial {
+            background-color: #f9f5f0;
+            border-left: 6px solid #d4a5a5;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        
+        .testimonial-text {
+            font-size: 24px;
+            font-style: italic;
+            color: #1a1a1a;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-size: 20px;
+            color: #5d2e46;
+            font-weight: 700;
+            text-align: right;
+        }
+        
+        .testimonial-meta {
+            font-size: 18px;
+            color: #4a4a4a;
+            text-align: right;
+        }
+        
+        /* CTA Button Enhanced */
+        .cta-primary {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            font-size: 22px;
+            font-weight: 700;
+            font-family: 'Lora', Georgia, serif;
+            padding: 20px 40px;
+            border: 3px solid #d4a5a5;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px auto;
+            min-height: 60px;
+            min-width: 280px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .cta-primary:hover {
+            background-color: #c9969c;
+            border-color: #c9969c;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(212, 165, 165, 0.4);
+        }
+        
+        /* Trust Statistics - NEW */
+        .trust-stats {
+            background-color: #ffffff;
+            padding: 60px 20px;
+        }
+        
+        .trust-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            background-color: #f9f5f0;
+            border: 2px solid #d4a5a5;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            color: #5d2e46;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .stat-label {
+            font-size: 22px;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        /* Reading Order Guide - NEW Interactive Element */
+        .reading-guide {
+            background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%);
+            padding: 60px 20px;
+        }
+        
+        .section-header {
+            font-size: 42px;
+            color: #5d2e46;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .section-intro {
+            font-size: 22px;
+            color: #4a4a4a;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+        
+        .guide-question {
+            background-color: #ffffff;
+            border: 3px solid #d4a5a5;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        
+        .question-text {
+            font-size: 26px;
+            color: #5d2e46;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .option-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .option-button {
+            background-color: #f9f5f0;
+            color: #1a1a1a;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px 30px;
+            border: 3px solid #d4a5a5;
+            border-radius: 8px;
+            cursor: pointer;
+            min-height: 60px;
+            font-family: 'Lora', Georgia, serif;
+            transition: all 0.3s ease;
+        }
+        
+        .option-button:hover {
+            background-color: #d4a5a5;
+            transform: scale(1.02);
+        }
+        
+        /* Book Grid with Enhanced Social Proof */
+        .books-section {
+            background-color: #ffffff;
+            padding: 60px 20px;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .book-card {
+            background-color: #f9f5f0;
+            border: 2px solid #d4a5a5;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(93, 46, 70, 0.2);
+        }
+        
+        .book-cover {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .book-rating {
+            font-size: 32px;
+            color: #d4a5a5;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+        }
+        
+        .book-review-count {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+        
+        .book-title {
+            font-size: 26px;
+            color: #5d2e46;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .book-tagline {
+            font-size: 20px;
+            color: #4a4a4a;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .book-button {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 16px 32px;
+            border: 2px solid #d4a5a5;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            min-height: 55px;
+            min-width: 180px;
+            font-family: 'Lora', Georgia, serif;
+            transition: all 0.3s ease;
+        }
+        
+        .book-button:hover {
+            background-color: #c9969c;
+            border-color: #c9969c;
+            transform: scale(1.03);
+        }
+        
+        /* Testimonials Section - Enhanced */
+        .testimonials-section {
+            background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%);
+            padding: 80px 20px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 50px auto 0;
+        }
+        
+        .testimonial-card {
+            background-color: #ffffff;
+            border: 2px solid #d4a5a5;
+            border-radius: 12px;
+            padding: 35px;
+        }
+        
+        .testimonial-stars {
+            font-size: 28px;
+            color: #d4a5a5;
+            margin-bottom: 15px;
+            letter-spacing: 4px;
+        }
+        
+        .testimonial-quote {
+            font-size: 20px;
+            color: #1a1a1a;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-attribution {
+            font-size: 18px;
+            color: #5d2e46;
+            font-weight: 700;
+        }
+        
+        .testimonial-location {
+            font-size: 18px;
+            color: #4a4a4a;
+        }
+        
+        .verified-badge {
+            display: inline-block;
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        
+        /* Newsletter Section with Social Proof */
+        .newsletter-section {
+            background-color: #5d2e46;
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-title {
+            font-size: 42px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .newsletter-description {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-social-proof {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d4a5a5;
+            margin-bottom: 35px;
+        }
+        
+        .newsletter-form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .form-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 18px 25px;
+            font-size: 20px;
+            border: 3px solid #d4a5a5;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-family: 'Lora', Georgia, serif;
+            color: #1a1a1a;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #5d2e46;
+            box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.3);
+        }
+        
+        .newsletter-button {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            min-height: 60px;
+            min-width: 250px;
+            font-family: 'Lora', Georgia, serif;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-button:hover {
+            background-color: #c9969c;
+            transform: scale(1.03);
+        }
+        
+        /* Community Section - NEW */
+        .community-section {
+            background-color: #ffffff;
+            padding: 80px 20px;
+        }
+        
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        
+        .community-card {
+            background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%);
+            border: 2px solid #d4a5a5;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .community-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .community-title {
+            font-size: 26px;
+            color: #5d2e46;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .community-description {
+            font-size: 20px;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .community-stat {
+            font-size: 22px;
+            color: #d4a5a5;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #5d2e46;
+            color: #ffffff;
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-text {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .social-link {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            min-height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #c9969c;
+            transform: scale(1.05);
+        }
+        
+        .copyright {
+            font-size: 18px;
+            color: #d4a5a5;
+            margin-top: 30px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 48px;
+            }
+            
+            .tagline {
+                font-size: 24px;
+            }
+            
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Accessibility Bar - NEW 2025 Feature -->
+    <div class="accessibility-bar">
+        <div style="font-weight: 700;">Accessibility Controls:</div>
+        <div class="text-controls">
+            <span>Text Size:</span>
+            <button onclick="adjustTextSize(-2)">A-</button>
+            <button onclick="adjustTextSize(0)">A</button>
+            <button onclick="adjustTextSize(2)">A+</button>
+            <button onclick="toggleHighContrast()" style="margin-left: 20px;">High Contrast</button>
+        </div>
+    </div>
+
+    <!-- Hero Section with Enhanced Social Proof -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="site-title">Olivia Sands</h1>
+            <p class="tagline">Heartwarming Romance ♥ Romance douce</p>
+            
+            <!-- Social Proof Badge - NEW -->
+            <div class="social-proof-badge">
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-text">4.8 out of 5 Stars</div>
+                <div class="review-count">Based on 5,847 reader reviews</div>
+                <div class="trust-badge">✓ Clean Romance · ✓ Heartwarming Stories · ✓ Happy Endings</div>
+            </div>
+            
+            <!-- Featured Testimonial Rotation - NEW -->
+            <div class="featured-testimonial">
+                <p class="testimonial-text">"These books are exactly what I've been looking for - sweet, heartwarming romance without the worry. I've read every single one and can't wait for the next!"</p>
+                <p class="testimonial-author">— Margaret R.</p>
+                <p class="testimonial-meta">Verified Reader • Book Club Member</p>
+            </div>
+            
+            <a href="#books" class="cta-primary">Start Reading Your Free Book →</a>
+        </div>
+    </div>
+
+    <!-- Trust Statistics Section - NEW -->
+    <div class="trust-stats">
+        <h2 class="section-header">Join Thousands of Happy Readers</h2>
+        <div class="trust-stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">15,000+</div>
+                <div class="stat-label">Newsletter Subscribers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Heartwarming Stories Published</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5,800+</div>
+                <div class="stat-label">5-Star Reviews</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Years of Publishing</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading Order Guide - NEW Interactive Element -->
+    <div class="reading-guide">
+        <h2 class="section-header">Not Sure Where to Start?</h2>
+        <p class="section-intro">Answer one simple question, and we'll guide you to your perfect first read!</p>
+        
+        <div class="guide-question">
+            <p class="question-text">What type of romance story sounds most appealing to you?</p>
+            <div class="option-buttons">
+                <button class="option-button">Small Town Second Chances (Maple Creek Series)</button>
+                <button class="option-button">Holiday Romance Magic (Christmas in Maple Creek)</button>
+                <button class="option-button">Standalone Sweet Romance (Perfect for a Weekend)</button>
+                <button class="option-button">Show Me All Books (I'll Browse!)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Books Section with Enhanced Social Proof -->
+    <div class="books-section" id="books">
+        <h2 class="section-header">Beloved Series & Standalone Stories</h2>
+        <p class="section-intro">Each book is a complete story with a satisfying happily-ever-after</p>
+        
+        <div class="books-grid">
+            <div class="book-card">
+                <img src="https://via.placeholder.com/280x420/d4a5a5/ffffff?text=Book+1" alt="Sweet Beginnings Cover" class="book-cover">
+                <div class="book-rating">★★★★★</div>
+                <div class="book-review-count">4.9 stars (1,247 reviews)</div>
+                <h3 class="book-title">Sweet Beginnings</h3>
+                <p class="book-tagline">Where love starts with a cup of coffee...</p>
+                <a href="#" class="book-button">View Details →</a>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://via.placeholder.com/280x420/c9969c/ffffff?text=Book+2" alt="Autumn Hearts Cover" class="book-cover">
+                <div class="book-rating">★★★★★</div>
+                <div class="book-review-count">4.8 stars (892 reviews)</div>
+                <h3 class="book-title">Autumn Hearts</h3>
+                <p class="book-tagline">Fall in love this season...</p>
+                <a href="#" class="book-button">View Details →</a>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://via.placeholder.com/280x420/d4a5a5/ffffff?text=Book+3" alt="Christmas Wishes Cover" class="book-cover">
+                <div class="book-rating">★★★★★</div>
+                <div class="book-review-count">4.9 stars (1,534 reviews)</div>
+                <h3 class="book-title">Christmas Wishes</h3>
+                <p class="book-tagline">A holiday miracle for two lonely hearts...</p>
+                <a href="#" class="book-button">View Details →</a>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://via.placeholder.com/280x420/c9969c/ffffff?text=Book+4" alt="Spring Promise Cover" class="book-cover">
+                <div class="book-rating">★★★★★</div>
+                <div class="book-review-count">4.8 stars (976 reviews)</div>
+                <h3 class="book-title">Spring Promise</h3>
+                <p class="book-tagline">New beginnings bloom in spring...</p>
+                <a href="#" class="book-button">View Details →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Testimonials Section -->
+    <div class="testimonials-section">
+        <h2 class="section-header">What Readers Are Saying</h2>
+        <p class="section-intro">Real reviews from readers just like you</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"I love these clean romance novels! Perfect for my book club. The characters feel real and the endings always leave me smiling. I've recommended them to all my friends."</p>
+                <p class="testimonial-attribution">Susan M.</p>
+                <p class="testimonial-location">Portland, Oregon</p>
+                <span class="verified-badge">✓ Verified Reader</span>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Finally found an author who writes the kind of romance I enjoy! Sweet, heartwarming, and always satisfying. I read one book and immediately bought the entire series."</p>
+                <p class="testimonial-attribution">Patricia L.</p>
+                <p class="testimonial-location">Tampa, Florida</p>
+                <span class="verified-badge">✓ Verified Reader</span>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"These stories remind me why I fell in love with reading. The small town setting is cozy, the romance is genuine, and I always know I'll get a happy ending."</p>
+                <p class="testimonial-attribution">Linda K.</p>
+                <p class="testimonial-location">Denver, Colorado</p>
+                <span class="verified-badge">✓ Verified Reader</span>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Perfect for my bedside table! The books are easy to read with comfortable font size, and the stories are exactly what I want - sweet romance without anything I need to skip."</p>
+                <p class="testimonial-attribution">Carol J.</p>
+                <p class="testimonial-location">Phoenix, Arizona</p>
+                <span class="verified-badge">✓ Verified Reader</span>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"As a retired teacher, I appreciate well-written stories that don't talk down to readers. These books respect their audience and deliver wonderful romance."</p>
+                <p class="testimonial-attribution">Dorothy R.</p>
+                <p class="testimonial-location">Boston, Massachusetts</p>
+                <span class="verified-badge">✓ Verified Reader</span>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"My daughter introduced me to these books and now we both read them! Love that we can share these stories. The small town series is our favorite."</p>
+                <p class="testimonial-attribution">Barbara W.</p>
+                <p class="testimonial-location">Atlanta, Georgia</p>
+                <span class="verified-badge">✓ Verified Reader</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Section - NEW -->
+    <div class="community-section">
+        <h2 class="section-header">Join Our Reader Community</h2>
+        <p class="section-intro">Connect with fellow romance readers and be the first to know about new releases</p>
+        
+        <div class="community-grid">
+            <div class="community-card">
+                <div class="community-icon">📚</div>
+                <h3 class="community-title">Private Facebook Group</h3>
+                <p class="community-description">Join discussions, share favorite moments, and connect with other readers who love heartwarming romance.</p>
+                <p class="community-stat">2,500+ Active Members</p>
+                <a href="#" class="book-button">Join Group</a>
+            </div>
+            
+            <div class="community-card">
+                <div class="community-icon">📖</div>
+                <h3 class="community-title">Monthly Book Club</h3>
+                <p class="community-description">Virtual meetups to discuss featured books, with author Q&A sessions and exclusive insights.</p>
+                <p class="community-stat">Meets 1st Saturday Monthly</p>
+                <a href="#" class="book-button">Learn More</a>
+            </div>
+            
+            <div class="community-card">
+                <div class="community-icon">✉️</div>
+                <h3 class="community-title">Exclusive Newsletter</h3>
+                <p class="community-description">Get early access to new releases, bonus chapters, behind-the-scenes content, and special offers.</p>
+                <p class="community-stat">Sent Monthly</p>
+                <a href="#newsletter" class="book-button">Subscribe</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section with Social Proof -->
+    <div class="newsletter-section" id="newsletter">
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">Get Your Free Book Today!</h2>
+            <p class="newsletter-description">Join our community and receive a free complete novel, plus exclusive content, early release notifications, and special subscriber-only offers.</p>
+            <p class="newsletter-social-proof">✓ Join 15,000+ Happy Subscribers</p>
+            
+            <div class="newsletter-form">
+                <input type="email" class="form-input" placeholder="Enter your email address" aria-label="Email address">
+                <button class="newsletter-button">Send Me My Free Book →</button>
+                <p style="margin-top: 25px; font-size: 18px; color: #4a4a4a; line-height: 1.8;">
+                    We respect your privacy. Unsubscribe anytime. No spam, ever.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <p class="footer-text">Connect with me on social media for updates, behind-the-scenes content, and exclusive previews!</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Goodreads</a>
+                <a href="#" class="social-link">Amazon</a>
+            </div>
+            
+            <p class="copyright">© 2025 Olivia Sands. All rights reserved.</p>
+            <p class="copyright" style="margin-top: 15px;">Designed with ❤️ for Romance Readers</p>
+        </div>
+    </div>
+
+    <script>
+        // Text size adjustment functionality
+        let currentFontSize = 20;
+        
+        function adjustTextSize(change) {
+            if (change === 0) {
+                currentFontSize = 20; // Reset to default
+            } else {
+                currentFontSize += change;
+                currentFontSize = Math.max(18, Math.min(28, currentFontSize)); // Min 18px, Max 28px
+            }
+            document.body.style.fontSize = currentFontSize + 'px';
+            
+            // Provide feedback
+            const buttons = document.querySelectorAll('.text-controls button');
+            buttons.forEach(btn => {
+                btn.style.boxShadow = '0 0 10px rgba(212, 165, 165, 0.5)';
+                setTimeout(() => {
+                    btn.style.boxShadow = 'none';
+                }, 300);
+            });
+        }
+        
+        // High contrast mode toggle
+        let highContrast = false;
+        
+        function toggleHighContrast() {
+            highContrast = !highContrast;
+            
+            if (highContrast) {
+                document.body.style.backgroundColor = '#000000';
+                document.body.style.color = '#ffffff';
+                
+                // Update various sections
+                document.querySelectorAll('.hero, .reading-guide, .testimonials-section').forEach(el => {
+                    el.style.background = '#1a1a1a';
+                });
+                
+                document.querySelectorAll('.book-card, .testimonial-card, .community-card, .stat-card').forEach(el => {
+                    el.style.backgroundColor = '#2a2a2a';
+                    el.style.color = '#ffffff';
+                });
+                
+                alert('High contrast mode enabled. Toggle again to return to standard view.');
+            } else {
+                // Reset to default
+                location.reload();
+            }
+        }
+        
+        // Simple interaction for reading guide options
+        document.querySelectorAll('.option-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('This would take you to: ' + this.textContent + '\n\n(Demo version - in production this would navigate to the appropriate section or series page)');
+            });
+        });
+    </script>
+</body>
+</html>

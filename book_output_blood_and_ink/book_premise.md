@@ -1,0 +1,8 @@
+[premise]
+- Genre: Romantic Thriller (Romance + Mystery Thriller hybrid)
+- Target audience: Adult women 25-45, fans of romantic suspense, BookTok readers seeking mature, emotionally intense stories with high-stakes danger
+- Logline: When FBI profiler Nadia Reznik recognizes a serial killer's signature in a viral tattoo design, she goes undercover at Phoenix Studio—only to discover the lead artist is Julian Kade, the ex-fiancé who vanished from her life five years ago without explanation. Now she must determine if he's the killer's accomplice or the next victim, all while confronting the heartbreak that never healed.
+- Core conflict: External - Nadia must solve the serial murder case before the killer strikes again (48-hour kill cycle). Internal - Nadia and Julian must navigate their unresolved past while trapped in close quarters, facing the possibility that one of them might be responsible for the deaths.
+- Unique hook: Tattoo studio as crime scene; intimate art of tattooing creates forced proximity and physical vulnerability; coded messages hidden in tattoo designs; second-chance romance colliding with murder investigation where trust is impossible but necessary.
+- Thematic focus: Truth vs. protection (when keeping secrets destroys what we're trying to save), trust after betrayal, the permanence of both tattoos and emotional scars, art as both expression and evidence.
+[/premise]

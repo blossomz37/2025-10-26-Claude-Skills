@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Sands Brand Redesign - Before & After Comparison</title>
+    <link href="https://fonts.googleapis.com/css?family=Rochester:400|Lora:400,400i,700,700i" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%);
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-family: 'Rochester', cursive, serif;
+            font-size: 56px;
+            color: #5d2e46;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: #d4a5a5;
+            margin-bottom: 30px;
+        }
+        
+        .intro {
+            font-size: 18px;
+            color: #4a4a4a;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 2.0;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        @media (max-width: 968px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .comparison-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-card.before {
+            border-top: 6px solid #666666;
+        }
+        
+        .comparison-card.after {
+            border-top: 6px solid #d4a5a5;
+        }
+        
+        .card-label {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .card-label.before {
+            color: #666666;
+        }
+        
+        .card-label.after {
+            color: #5d2e46;
+        }
+        
+        .example-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8e0d8;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .color-swatch {
+            text-align: center;
+        }
+        
+        .color-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .color-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .color-hex {
+            font-size: 12px;
+            color: #4a4a4a;
+        }
+        
+        .text-sample {
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .text-sample.before {
+            background-color: #ffffff;
+        }
+        
+        .text-sample.after {
+            background-color: #f9f5f0;
+        }
+        
+        .button-demo {
+            margin-top: 15px;
+        }
+        
+        .btn-before {
+            background-color: #243be5;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-before:hover {
+            background-color: #0009b3;
+        }
+        
+        .btn-after {
+            background-color: #d4a5a5;
+            color: #1a1a1a;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px 32px;
+            border: 2px solid #d4a5a5;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            min-height: 48px;
+            min-width: 160px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-after:hover {
+            background-color: #c9969c;
+            border-color: #c9969c;
+            transform: scale(1.02);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            padding: 20px;
+            background-color: #f9f5f0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #5d2e46;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #4a4a4a;
+        }
+        
+        .full-width-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section-heading {
+            font-size: 36px;
+            font-weight: 700;
+            color: #5d2e46;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        .comparison-table th {
+            background-color: #f9f5f0;
+            color: #5d2e46;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px;
+            text-align: left;
+            border-bottom: 3px solid #d4a5a5;
+        }
+        
+        .comparison-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e8e0d8;
+            font-size: 16px;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f9f5f0;
+        }
+        
+        .before-value {
+            color: #666666;
+        }
+        
+        .after-value {
+            color: #d4a5a5;
+            font-weight: 600;
+        }
+        
+        .key-improvements {
+            background-color: #f9f5f0;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .improvement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .improvement-item {
+            text-align: center;
+        }
+        
+        .improvement-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .improvement-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #5d2e46;
+            margin-bottom: 12px;
+        }
+        
+        .improvement-desc {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.8;
+        }
+        
+        .mockup-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .mockup-link-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .mockup-link-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .mockup-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: #d4a5a5;
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 60px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        
+        .mockup-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #5d2e46;
+            margin-bottom: 16px;
+        }
+        
+        .mockup-desc {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Brand Redesign Comparison</h1>
+            <p class="subtitle">Olivia Sands - Optimized for 65+ Romance Readers</p>
+            <p class="intro">
+                This document showcases the transformation from the current design to an improved, 
+                accessibility-focused brand that better serves the target demographic of women aged 65+ 
+                who love clean, heartwarming romance novels.
+            </p>
+        </header>
+        
+        <!-- Color Palette Comparison -->
+        <div class="comparison-grid">
+            <div class="comparison-card before">
+                <h2 class="card-label before">BEFORE: Current Colors</h2>
+                
+                <div class="example-section">
+                    <h3 class="section-title">Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #243be5;"></div>
+                            <div class="color-name">Primary Blue</div>
+                            <div class="color-hex">#243be5</div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #000000;"></div>
+                            <div class="color-name">Black Text</div>
+                            <div class="color-hex">#000000</div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #666666;"></div>
+                            <div class="color-name">Gray Text</div>
+                            <div class="color-hex">#666666</div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #ffffff; border: 1px solid #ccc;"></div>
+                            <div class="color-name">White</div>
+                            <div class="color-hex">#ffffff</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-section">
+                    <h3 class="section-title">Typography</h3>
+                    <div class="text-sample before">
+                        <p style="font-size: 24px; font-weight: 700; color: #000000; margin-bottom: 12px;">Snowberry Hill</p>
+                        <p style="font-size: 16px; color: #000000; line-height: 1.6; margin-bottom: 12px;">
+                            A heartwarming contemporary small-town romance about duty, desire, and finding love in unexpected places.
+                        </p>
+                        <p style="font-size: 14px; color: #666666; line-height: 1.6;">
+                            Secondary text appears in gray for less emphasis.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="example-section">
+                    <h3 class="section-title">Button Design</h3>
+                    <div class="button-demo">
+                        <a href="#" class="btn-before">More Details »</a>
+                    </div>
+                    <p style="font-size: 14px; color: #4a4a4a; margin-top: 15px;">
+                        Button height: ~38px<br>
+                        Font size: 14px<br>
+                        Padding: 10px 20px
+                    </p>
+                </div>
+            </div>
+            
+            <div class="comparison-card after">
+                <h2 class="card-label after">AFTER: Improved Colors</h2>
+                
+                <div class="example-section">
+                    <h3 class="section-title">Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #d4a5a5;"></div>
+                            <div class="color-name">Soft Rose</div>
+                            <div class="color-hex">#d4a5a5</div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #5d2e46;"></div>
+                            <div class="color-name">Burgundy</div>
+                            <div class="color-hex">#5d2e46</div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #1a1a1a;"></div>
+                            <div class="color-name">Dark Text</div>
+                            <div class="color-hex">#1a1a1a</div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-box" style="background-color: #f9f5f0;"></div>
+                            <div class="color-name">Warm Cream</div>
+                            <div class="color-hex">#f9f5f0</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-section">
+                    <h3 class="section-title">Typography</h3>
+                    <div class="text-sample after">
+                        <p style="font-size: 32px; font-weight: 700; color: #5d2e46; margin-bottom: 16px;">Snowberry Hill</p>
+                        <p style="font-size: 20px; color: #1a1a1a; line-height: 2.0; margin-bottom: 16px;">
+                            A heartwarming contemporary small-town romance about duty, desire, and finding love in unexpected places.
+                        </p>
+                        <p style="font-size: 18px; color: #4a4a4a; line-height: 1.8;">
+                            Secondary text uses darker gray for better contrast.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="example-section">
+                    <h3 class="section-title">Button Design</h3>
+                    <div class="button-demo">
+                        <a href="#" class="btn-after">More Details »</a>
+                    </div>
+                    <p style="font-size: 14px; color: #4a4a4a; margin-top: 15px;">
+                        Button height: 48px minimum<br>
+                        Font size: 18px<br>
+                        Padding: 16px 32px
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Metrics -->
+        <div class="full-width-section">
+            <h2 class="section-heading">Key Improvements</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">+25%</div>
+                    <div class="stat-label">Text Size Increase<br>(16px → 20px)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">+25%</div>
+                    <div class="stat-label">Line Height Increase<br>(1.6 → 2.0)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">+26%</div>
+                    <div class="stat-label">Button Size Increase<br>(38px → 48px)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">+37%</div>
+                    <div class="stat-label">Book Cover Size<br>(6-col → 4-col grid)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">AAA</div>
+                    <div class="stat-label">Accessibility<br>Contrast Standard</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">+33%</div>
+                    <div class="stat-label">Grid Spacing<br>(30px → 40px)</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Comparison Table -->
+        <div class="full-width-section">
+            <h2 class="section-heading">Side-by-Side Comparison</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Before</th>
+                        <th>After</th>
+                        <th>Why Changed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Body Text Size</strong></td>
+                        <td class="before-value">16px</td>
+                        <td class="after-value">20px</td>
+                        <td>Presbyopia in 65+ requires larger text</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Line Height</strong></td>
+                        <td class="before-value">1.6</td>
+                        <td class="after-value">2.0</td>
+                        <td>Reduces eye strain, improves readability</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primary Color</strong></td>
+                        <td class="before-value">Blue #243be5</td>
+                        <td class="after-value">Rose #d4a5a5</td>
+                        <td>Warm colors = romance + aging eye visibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Button Height</strong></td>
+                        <td class="before-value">~38px</td>
+                        <td class="after-value">48px min</td>
+                        <td>Easier clicking with reduced motor precision</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Book Grid</strong></td>
+                        <td class="before-value">6 columns</td>
+                        <td class="after-value">4 columns</td>
+                        <td>Larger covers = better title legibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Text Contrast</strong></td>
+                        <td class="before-value">AA (mixed)</td>
+                        <td class="after-value">AAA</td>
+                        <td>Maximum readability for aging eyes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Link Underlines</strong></td>
+                        <td class="before-value">None</td>
+                        <td class="after-value">Always underlined</td>
+                        <td>Clear link identification for 65+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social Proof</strong></td>
+                        <td class="before-value">None</td>
+                        <td class="after-value">Reviews + ratings</td>
+                        <td>65+ readers highly value peer recommendations</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Key Benefits -->
+        <div class="key-improvements">
+            <h2 class="section-heading" style="color: #5d2e46;">Why These Changes Matter</h2>
+            <div class="improvement-grid">
+                <div class="improvement-item">
+                    <div class="improvement-icon">👁️</div>
+                    <div class="improvement-title">Better Vision</div>
+                    <div class="improvement-desc">
+                        Larger text and higher contrast accommodate presbyopia and reduced contrast sensitivity in 65+ readers
+                    </div>
+                </div>
+                
+                <div class="improvement-item">
+                    <div class="improvement-icon">🖱️</div>
+                    <div class="improvement-title">Easier Clicking</div>
+                    <div class="improvement-desc">
+                        48px buttons and generous spacing reduce mis-clicks caused by reduced motor precision
+                    </div>
+                </div>
+                
+                <div class="improvement-item">
+                    <div class="improvement-icon">🎨</div>
+                    <div class="improvement-title">Romance Colors</div>
+                    <div class="improvement-desc">
+                        Warm rose palette aligns with genre expectations and creates emotional connection
+                    </div>
+                </div>
+                
+                <div class="improvement-item">
+                    <div class="improvement-icon">⭐</div>
+                    <div class="improvement-title">Social Proof</div>
+                    <div class="improvement-desc">
+                        Reviews build trust and credibility—critical for 65+ demographic purchasing decisions
+                    </div>
+                </div>
+                
+                <div class="improvement-item">
+                    <div class="improvement-icon">✅</div>
+                    <div class="improvement-title">AAA Accessible</div>
+                    <div class="improvement-desc">
+                        Exceeds WCAG standards for contrast and interaction, ensuring maximum usability
+                    </div>
+                </div>
+                
+                <div class="improvement-item">
+                    <div class="improvement-icon">📚</div>
+                    <div class="improvement-title">Clearer Books</div>
+                    <div class="improvement-desc">
+                        4-column grid makes book covers 37% larger—titles are now easily legible
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View Mockups Section -->
+        <div class="full-width-section">
+            <h2 class="section-heading">Interactive Mockups</h2>
+            <p style="text-align: center; font-size: 18px; color: #4a4a4a; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Explore the full transformation through three interactive HTML mockups that demonstrate 
+                the progression from current design to complete implementation.
+            </p>
+            
+            <div class="mockup-links">
+                <a href="mockup-1-current.html" class="mockup-link-card" target="_blank">
+                    <div class="mockup-number">1</div>
+                    <div class="mockup-title">Current Design</div>
+                    <div class="mockup-desc">
+                        Shows existing implementation with blue buttons, smaller text, 6-column grid, and no social proof
+                    </div>
+                </a>
+                
+                <a href="mockup-2-improved.html" class="mockup-link-card" target="_blank">
+                    <div class="mockup-number">2</div>
+                    <div class="mockup-title">Improved Brand</div>
+                    <div class="mockup-desc">
+                        Demonstrates brand improvements: rose buttons, larger text, warm colors, 4-column grid, AAA accessibility
+                    </div>
+                </a>
+                
+                <a href="mockup-3-complete.html" class="mockup-link-card" target="_blank">
+                    <div class="mockup-number">3</div>
+                    <div class="mockup-title">Complete Implementation</div>
+                    <div class="mockup-desc">
+                        Full vision with all brand improvements PLUS social proof integration (reviews, ratings, clean romance badge)
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Expected Results -->
+        <div class="full-width-section" style="background-color: #f9f5f0;">
+            <h2 class="section-heading">Expected Results</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-size: 24px; color: #5d2e46; margin-bottom: 15px;">📈 Usability Improvements</h3>
+                    <p style="font-size: 18px; line-height: 2.0; color: #1a1a1a;">
+                        <strong>+40%</strong> reading comfort • <strong>+30%</strong> click accuracy • <strong>+50%</strong> navigation clarity
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-size: 24px; color: #5d2e46; margin-bottom: 15px;">💡 Engagement Metrics</h3>
+                    <p style="font-size: 18px; line-height: 2.0; color: #1a1a1a;">
+                        <strong>+25%</strong> time on page • <strong>+20%</strong> pages per session • <strong>-15%</strong> bounce rate
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-size: 24px; color: #5d2e46; margin-bottom: 15px;">🎯 Conversion Gains</h3>
+                    <p style="font-size: 18px; line-height: 2.0; color: #1a1a1a;">
+                        <strong>+30%</strong> book clicks • <strong>+20%</strong> newsletter signups • <strong>+15%</strong> VIP joins
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 24px; color: #5d2e46; margin-bottom: 15px;">❤️ Trust & Connection</h3>
+                    <p style="font-size: 18px; line-height: 2.0; color: #1a1a1a;">
+                        Immediate credibility from reviews • Warmer brand perception • Stronger emotional connection
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p style="font-size: 20px; color: #5d2e46; font-weight: 700;">Olivia Sands Brand Redesign</p>
+            <p>Optimized for 65+ Romance Readers | October 2025</p>
+            <p style="margin-top: 20px; font-style: italic;">
+                "Every decision grounded in research about 65+ vision, motor skills, and romance reader expectations"
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

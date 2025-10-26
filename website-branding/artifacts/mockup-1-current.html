@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Sands - Current Design (Mockup 1)</title>
+    <link href="https://fonts.googleapis.com/css?family=Rochester:400|Lora:400,400i,700,700i" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 30px 20px;
+        }
+        
+        .site-title {
+            font-family: 'Rochester', cursive, serif;
+            font-size: 64px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-size: 20px;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+        
+        .free-book-cta {
+            background-color: #243be5;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .free-book-cta:hover {
+            background-color: #0009b3;
+        }
+        
+        .series-section {
+            margin-bottom: 80px;
+        }
+        
+        .series-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 1200px) {
+            .book-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        .book-card {
+            text-align: center;
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .book-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .book-description {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .more-details-btn {
+            background-color: #243be5;
+            color: #ffffff;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .more-details-btn:hover {
+            background-color: #0009b3;
+        }
+        
+        .mockup-label {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin-bottom: 8px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            margin: 0 8px;
+            background-color: #666666;
+            color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="mockup-label">MOCKUP 1: Current Design</div>
+    
+    <div class="container">
+        <header>
+            <h1 class="site-title">Olivia Sands</h1>
+            <p class="tagline">Heartwarming Romance ❤ Olivia Sands ❤ Romance douce</p>
+            <p style="font-size: 18px; color: #000000; margin-bottom: 20px;">Heartwarming Contemporary Cozy Small Town Romance Series</p>
+            <a href="#" class="free-book-cta">Click Here to Get a Free Book</a>
+        </header>
+        
+        <!-- Snowberry Hill Series -->
+        <section class="series-section">
+            <h2 class="series-title">Snowberry Hill</h2>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8d5c4 0%, #c9a690 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5d4e37;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">Colton</h3>
+                    <p class="book-description">A heartwarming contemporary small-town romance about duty, desire, and finding love...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d4c4e8 0%, #a690c9 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #4e375d;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">Mason</h3>
+                    <p class="book-description">Mason's perfectly planned life takes an unexpected turn when...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #c4e8d5 0%, #90c9a6 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #375d4e;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">Brandon</h3>
+                    <p class="book-description">A second-chance romance set against the backdrop of Kentucky's bourbon country...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8c4d5 0%, #c990a6 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5d374e;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">Dylan</h3>
+                    <p class="book-description">When city meets country in this charming small-town tale...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8e0c4 0%, #c9b690 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5d5137;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">Austin</h3>
+                    <p class="book-description">A tender story of healing and hope in Elm Ridge, Kentucky...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #c4d5e8 0%, #90a6c9 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #374e5d;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">Nathan</h3>
+                    <p class="book-description">The final book in the beloved Snowberry Hill series...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dovetail Lake Series -->
+        <section class="series-section">
+            <h2 class="series-title">Dovetail Lake</h2>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d5e8e0 0%, #a6c9b6 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #375d51;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">The Lake House</h3>
+                    <p class="book-description">A summer romance on the shores of beautiful Dovetail Lake...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8d5e0 0%, #c9a6b6 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5d3751;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">The Bookshop</h3>
+                    <p class="book-description">Love blooms among the stacks in this cozy small-town tale...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e0d5e8 0%, #b6a6c9 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #51375d;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">The Coffee Shop</h3>
+                    <p class="book-description">Where every cup comes with a side of romance...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8e0d5 0%, #c9b6a6 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5d5137;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">The Bakery</h3>
+                    <p class="book-description">Sweet treats and sweeter romance in Dovetail Lake...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #d5e8d5 0%, #a6c9a6 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #375d37;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">The Garden</h3>
+                    <p class="book-description">Love grows where it's planted in this tender story...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background: linear-gradient(135deg, #e8d5d5 0%, #c9a6a6 100%); height: 280px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5d3737;">
+                        [Book Cover]
+                    </div>
+                    <h3 class="book-title">The Inn</h3>
+                    <p class="book-description">Check in for cozy romance at the Dovetail Lake Inn...</p>
+                    <a href="#" class="more-details-btn">More Details »</a>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2025 Olivia Sands. All rights reserved.</p>
+            <p>Heartwarming Contemporary Cozy Small Town Romance</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" title="Facebook">f</a>
+                <a href="#" class="social-icon" title="Instagram">i</a>
+                <a href="#" class="social-icon" title="Pinterest">p</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
